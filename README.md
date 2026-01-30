@@ -1,0 +1,6 @@
+This repository contains two csv files. One of the intial data we received and one with cleaned data, missing values filled and extra ratios calculated. 
+On receving the data I first performed extensive exploratory data analysis to understand the nature of the data and fill missing values. I also used boxplots to visualise the data. 
+I then imputed the values-handling different data with different methods of imputation. Features with too many values missing were dropped while features like PE and Beta with 10 percent data missing were imputed with distribution preservation. All other data which had significantly few values missing were imputed with median values.
+I also encoded a value for industry which used market cap and industry Pe and normalised it to give a score. 
+After cleaning the data I trained a random forest model on it. The aim of the model is to classify the company as eihter investable or not. To prevent data leakage I have removed the closing price for year 2023 but kept it for year 2022 as this data was availaible and therefore can be used to make my decision.
+To further make sure the accuracy of the model was not reliant on closing price I also performed tests dropping those values and got similar(above 90%) accuracy.
